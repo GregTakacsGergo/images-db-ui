@@ -1,5 +1,4 @@
 # In this version I started adding a user interface 
-
 from db_config import func_db_with_blob
 import os
 import io
@@ -61,7 +60,7 @@ def insert_image():
 			if my_result is not None:
 				print(my_cursor.lastrowid)
 				save_blob(inserted_id, my_result)
-				check_image = Image.open("checkmark-16.png")
+				check_image = Image.open(os.path.join("resources", "checkmark-16.png"))
 				check_image = check_image.resize((20, 20))
 				check_image_tk = ImageTk.PhotoImage(check_image)
 				check_label = Label(root, image=check_image_tk)
@@ -77,7 +76,7 @@ def insert_image():
 				subprocess.run(['explorer', saved_here_path_dir.replace('/', '\\')])
 # if for some reason insertion fails, we get a red x near insert button 	        
 	except Exception as e:
-		x_image = Image.open("x-mark-16.png")
+		x_image = Image.open(os.path.join("resources", "x-mark-16.png"))
 		x_image = x_image.resize((20, 20))
 		x_image_tk = ImageTk.PhotoImage(x_image)
 		x_label = Label(root, image=x_image_tk)
