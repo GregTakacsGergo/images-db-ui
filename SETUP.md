@@ -40,6 +40,8 @@ pip install -r requirements.txt
 
 ### **Step 5: Run image_insert_read_ver3.py**
 
+Please go through the README
+
 #### **Troubleshooting**
 
 1. If dependency issues arise, try to ```pip install -r requirements_long.txt``` and take a long coffee
