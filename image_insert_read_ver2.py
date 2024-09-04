@@ -1,6 +1,4 @@
-# image_insert_read.py - a program that creates a MySQL database 
-# where we can insert, and get images from using a simple navigation menu.
-# First insert a picture, so that next you can open it!
+# image_insert_read_ver2.py slightly modified, handling basic exceptions.  
 
 import mysql.connector
 import os
@@ -71,4 +69,3 @@ if __name__ == "__main__":
 	finally:
 		my_db.close()
 # -------------------------------------------------------------------------------------------		
-# amikor 2.read-et nyomok, lefut, s utána megjelenik a kép
