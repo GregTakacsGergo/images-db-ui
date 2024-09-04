@@ -2,6 +2,7 @@ config.py/
 __pycache__/
 Readme.txt/
 blob_env/
+.venv/
 image_output/
 sir.jpg/
 so_good.jpg/
