@@ -1,7 +1,6 @@
 # image_insert_read.py - a program that creates a MySQL database 
 # where we can insert, and get images from using a simple navigation menu.
 # First insert a picture, so that next you can open it!
-# Also, accidentaly wrote a converter into jpg script:D
 
 
 import mysql.connector
@@ -11,7 +10,7 @@ import os
 my_db = mysql.connector.connect(
 	host = "localhost",
 	user = "root",
-	password = "Seamusoutside1",
+	password = "",
 	database = "db_with_blob")
 
 # Creating the cursor, and then a MySQL table with a BLOB column containing the images  
