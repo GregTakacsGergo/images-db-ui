@@ -1,4 +1,5 @@
 config.py/
+__pycache__/
 Readme.txt/
 blob_env/
 image_output/
