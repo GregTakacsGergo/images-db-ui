@@ -58,7 +58,7 @@ def insert_image():
 			insert_blob(file_path)
 			my_result = fetch_blob(inserted_id)
 			if my_result is not None:
-				print(my_cursor.lastrowid)
+				print(inserted_id)
 				save_blob(inserted_id, my_result)
 				check_image = Image.open(os.path.join("resources", "checkmark-16.png"))
 				check_image = check_image.resize((20, 20))
@@ -113,7 +113,7 @@ success_label.grid(row=2, column=0, columnspan=2)
 insert_button = Button(root, text="Insert Image", command=insert_image)
 insert_button.grid(row=0, column=0, padx=(0, 10), pady=10)
 
-display_button = Button(root, text="Display Image", command=display_image)
+display_button = Button(root, text="Display Image from DB", command=display_image)
 display_button.grid(row=1, column=0, padx=(0,10), pady=10)
 
 root.mainloop()
