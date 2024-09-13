@@ -58,7 +58,6 @@ def insert_image():
 			insert_blob(file_path)
 			my_result = fetch_blob(inserted_id)
 			if my_result is not None:
-				print(inserted_id)
 				save_blob(inserted_id, my_result)
 				check_image = Image.open(os.path.join("resources", "checkmark-16.png"))
 				check_image = check_image.resize((20, 20))
@@ -74,6 +73,7 @@ def insert_image():
 				saved_here_path_dir = os.path.dirname(saved_here_path)
 				time.sleep(1)
 				subprocess.run(['explorer', saved_here_path_dir.replace('/', '\\')])
+				
 # if for some reason insertion fails, we get a red x near insert button 	        
 	except Exception as e:
 		x_image = Image.open(os.path.join("resources", "x-mark-16.png"))
